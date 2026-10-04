@@ -1,0 +1,82 @@
+:root {
+  --color-barra: #1F4E3D;
+  --color-acento: #2F6B3F;
+  --color-borde: #B8C2BC;
+  --color-panel: #F3F6F1;
+  --color-texto: #1F2937;
+}
+
+html, body, .stApp, button, input, select, textarea {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer { visibility: hidden; }
+
+header[data-testid="stHeader"] {
+  background: var(--color-barra);
+  height: 3.25rem;
+}
+header[data-testid="stHeader"] * { color: #FFFFFF; }
+header[data-testid="stHeader"]::before {
+  content: "EcoAlert  |  Sistema de monitoreo preventivo de incendios forestales";
+  position: absolute;
+  left: 3.5rem;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+.block-container {
+  max-width: 100%;
+  padding-top: 4.5rem;
+  padding-bottom: 2rem;
+}
+
+[data-testid="stVerticalBlock"] { gap: 0.6rem; }
+
+[data-testid="stSidebar"] {
+  background: var(--color-panel);
+  border-right: 1px solid var(--color-borde);
+}
+
+h1, h2, h3, h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: var(--color-barra);
+}
+
+.stButton button, .stDownloadButton button {
+  border-radius: 0;
+  font-weight: normal;
+}
+
+[data-testid="stMetric"] {
+  background: #FFFFFF;
+  border: 1px solid var(--color-borde);
+  border-left: 4px solid var(--color-acento);
+  padding: 0.5rem 0.75rem;
+}
+[data-testid="stMetricLabel"] { font-size: 0.8rem; }
+[data-testid="stMetricValue"] { font-size: 1.4rem; }
+
+button[data-baseweb="tab"] {
+  background: var(--color-panel);
+  border: 1px solid var(--color-borde);
+  border-bottom: none;
+  margin-right: 2px;
+  padding: 0.4rem 1rem;
+}
+button[data-baseweb="tab"][aria-selected="true"] {
+  background: #FFFFFF;
+  font-weight: bold;
+}
+[data-baseweb="tab-highlight"] { background: var(--color-acento); }
+[data-baseweb="tab-border"] { background: var(--color-borde); }
+
+[data-testid="stPlotlyChart"] {
+  border: 1px solid var(--color-borde);
+}

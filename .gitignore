@@ -1,0 +1,13 @@
+# Licencia Gurobi
+gurobi.lic
+
+# Entorno virtual y cachés de Python
+.venv/
+__pycache__/
+*.pyc
+
+# Resultados generados por la app (CSV y última simulación)
+resultados/
+
+# Secretos locales de Streamlit
+.streamlit/secrets.toml
